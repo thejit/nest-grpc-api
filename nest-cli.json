@@ -1,0 +1,39 @@
+{
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/nest-grpc-api/src",
+  "monorepo": true,
+  "root": "apps/nest-grpc-api",
+  "compilerOptions": {
+    "webpack": true,
+    "tsConfigPath": "apps/nest-grpc-api/tsconfig.app.json"
+  },
+  "projects": {
+    "nest-grpc-api": {
+      "type": "application",
+      "root": "apps/nest-grpc-api",
+      "entryFile": "main",
+      "sourceRoot": "apps/nest-grpc-api/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/nest-grpc-api/tsconfig.app.json"
+      }
+    },
+    "summator": {
+      "type": "application",
+      "root": "apps/summator",
+      "entryFile": "main",
+      "sourceRoot": "apps/summator/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/summator/tsconfig.app.json"
+      }
+    },
+    "gateway": {
+      "type": "application",
+      "root": "apps/gateway",
+      "entryFile": "main",
+      "sourceRoot": "apps/gateway/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/gateway/tsconfig.app.json"
+      }
+    }
+  }
+}
